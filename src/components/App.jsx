@@ -3,11 +3,13 @@ import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 import GlobalStyle from '../styles/GlobalStyle';
 import { Home, Work, About, Contact } from '../pages';
+import Header from './Header';
 
 const App = () => {
   return (
     <>
       <Router>
+        <Header />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/work" component={Work} />
