@@ -1,9 +1,10 @@
 import React from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
-import GlobalStyle from '../styles/GlobalStyle';
-import { Home, Work, About, Contact } from '../pages';
-import Header from './Header';
+import GlobalStyle from './styles/GlobalStyle';
+import { Work, About, Contact } from './pages';
+import { Header } from './components';
+import { Home } from './pages/Home';
 
 const App = () => {
   return (
