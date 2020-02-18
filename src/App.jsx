@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import { GlobalStyle, theme } from './styles';
+import { GlobalStyle, theme } from 'styles';
 import { Work, About, Contact } from './pages';
 import { Header, Footer } from './components';
 import { Home } from './pages/Home';

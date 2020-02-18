@@ -2,10 +2,10 @@ import React, { useRef, useEffect } from 'react';
 import lottie from 'lottie-web';
 import styled from 'styled-components';
 
-import * as animationData from './cover.json';
+import * as animationData from 'data/animation.json';
 
 const S = {
-  Container: styled.div`
+  Cover: styled.div`
     width: 100%;
     height: 100%;
   `,
@@ -25,11 +25,7 @@ const Cover = () => {
     });
   }, []);
 
-  return (
-    <S.Container>
-      <div ref={cover} />
-    </S.Container>
-  );
+  return <S.Cover ref={cover} />;
 };
 
 export default Cover;
