@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import lottie from 'lottie-web';
 import styled from 'styled-components';
 
-import * as animationData from '../../../lottie/cover.json';
+import * as animationData from './cover.json';
 
 const S = {
   Container: styled.div`

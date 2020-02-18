@@ -1,23 +1,30 @@
 import React from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
-import GlobalStyle from './styles/GlobalStyle';
+import { GlobalStyle, theme } from './styles';
 import { Work, About, Contact } from './pages';
-import { Header } from './components';
+import { Header, Footer } from './components';
 import { Home } from './pages/Home';
+import ScrollToTop from './utils/scrollToTop';
 
 const App = () => {
   return (
     <>
       <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/work" component={Work} />
-          <Route path="/About" component={About} />
-          <Route path="/Contact" component={Contact} />
-        </Switch>
-        <GlobalStyle />
+        <ThemeProvider theme={theme}>
+          <ScrollToTop>
+            <Header />
+            <Footer />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/work" component={Work} />
+              <Route path="/About" component={About} />
+              <Route path="/Contact" component={Contact} />
+            </Switch>
+            <GlobalStyle />
+          </ScrollToTop>
+        </ThemeProvider>
       </Router>
     </>
   );
